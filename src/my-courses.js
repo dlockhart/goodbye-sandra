@@ -2,7 +2,7 @@
 import './course-card.js'
 import { LitElement, html, css } from 'lit-element';
 import { heading4Styles } from '@brightspace-ui/core/components/typography/styles.js';
-import { tileData } from './tile-data.js';
+import { courses } from './data.js';
 
 export class MyCourses extends LitElement {
 
@@ -32,9 +32,9 @@ export class MyCourses extends LitElement {
 		return html`
 			<h2 class="d2l-heading-4">My Courses</h2>
 			<div class="card-grid">
-				${tileData.map((tile => {
+				${courses.map((tile => {
 					return html`<goodbye-sandra-card
-						href="${tile.id}"
+						identifier="${tile.id}"
 						image="${tile.image}"
 						text="${tile.name}"></goodbye-sandra-card>`;
 				}))}
