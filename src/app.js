@@ -3,7 +3,7 @@ import './my-courses.js';
 import './navigation.js';
 import { LitElement, html, css } from 'lit-element';
 
-export class GoodbyeSandra extends LitElement {
+export class App extends LitElement {
 
 	static get styles() {
 		return css`
@@ -38,4 +38,4 @@ export class GoodbyeSandra extends LitElement {
 
 }
 
-customElements.define('goodbye-sandra', GoodbyeSandra);
+customElements.define('goodbye-sandra-app', App);
