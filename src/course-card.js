@@ -1,12 +1,13 @@
 
 import 'd2l-card/d2l-card.js';
 import { LitElement, html, css } from 'lit-element';
+import { navigator } from 'lit-element-router';
 
-export class Card extends LitElement {
+export class Card extends navigator(LitElement) {
 
 	static get properties() {
 		return {
-			href: { type: String },
+			identifier: { type: String },
 			image: { type: String },
 			text: { type: String }
 		};
@@ -40,13 +41,18 @@ export class Card extends LitElement {
 
 	render() {
 		return html`
-			<d2l-card text="${this.text}" href="/${this.href}">
+			<d2l-card text="${this.text}" href="course/${this.identifier}" @click="${this._handleClick}">
 				<div class="card-header" slot="header">
 					<img src="assets/course-images/${this.image}-sm.png" alt="">
 				</div>
 				<div class="card-content" slot="content">${this.text}</div>
 			</d2l-card>
 		`;
+	}
+
+	_handleClick(e) {
+		e.preventDefault();
+		this.navigate(`course/${this.identifier}`);
 	}
 
 }

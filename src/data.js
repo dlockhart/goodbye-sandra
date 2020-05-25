@@ -1,4 +1,4 @@
-export const tileData = [
+export const courses = [
 	{
 		id: 'course-1',
 		name: 'Course 1',
