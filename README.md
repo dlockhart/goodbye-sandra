@@ -24,4 +24,4 @@ npm run start:build
 ## Deployment
 
 The application will automatically be deployed upon successfuly merges to `master` via Netlify to:
-[https://happy-goldstine-a5ef0d.netlify.app/](happy-goldstine-a5ef0d.netlify.app/)
+[happy-goldstine-a5ef0d.netlify.app](https://happy-goldstine-a5ef0d.netlify.app/)
