@@ -3,31 +3,8 @@ import './calendar-widget.js';
 import './my-courses-widget.js';
 import './navigation.js';
 import { LitElement, html, css } from 'lit-element';
-import { router } from 'lit-element-router';
 
-export class App extends router(LitElement) {
-
-	static get properties() {
-		return {
-			route: { type: String },
-			params: { type: Object },
-			query: { type: Object }
-		};
-	}
-
-	static get routes() {
-		return [
-			{
-				name: 'home',
-				pattern: '',
-				data: {title: 'Goodbye to Sandra from Gaudi'}
-			},
-			{
-				name: 'course',
-				pattern: 'course/:id'
-			}
-		];
-	}
+export class App extends LitElement {
 
 	static get styles() {
 		return css`
@@ -64,13 +41,6 @@ export class App extends router(LitElement) {
 			}
 		`;
 	}
-	
-	 router(route, params, query, data) {
-		this.route = route;
-		this.params = params;
-		this.query = query;
-		console.log('router', route, params, query, data);
-	}
 
 	render() {
 		return html`
@@ -80,7 +50,7 @@ export class App extends router(LitElement) {
 			<main>
 				<div class="page-padding">
 					<div class="homepage">
-						<goodbye-sandra-my-courses-widget active-route="${this.route}" active-course="${this.params.id}"></goodbye-sandra-my-courses-widget>
+						<goodbye-sandra-my-courses-widget></goodbye-sandra-my-courses-widget>
 						<goodbye-sandra-announcements-widget></goodbye-sandra-announcements-widget>
 						<goodbye-sandra-calendar-widget></goodbye-sandra-calendar-widget>
 					</div>
