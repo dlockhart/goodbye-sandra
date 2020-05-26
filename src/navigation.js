@@ -35,7 +35,9 @@ export class Navigation extends LitElement {
 						<d2l-navigation-separator></d2l-navigation-separator>
 						<div class="course-name">Farewell Sandra!</div>
 					</div>
-					<div slot="right">Nav Header Right</div>
+					<div slot="right">
+						<d2l-navigation-link-image src="assets/user-image-set.png" text="Sandra Earl" slim></d2l-navigation-link-image><span>Sandra Earl</span>
+					</div>
 				</d2l-navigation-main-header>
 				<d2l-navigation-main-footer>
 					<div slot="main">Nav Footer</div>
