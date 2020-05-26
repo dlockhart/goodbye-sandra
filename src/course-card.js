@@ -1,9 +1,8 @@
 
 import 'd2l-card/d2l-card.js';
 import { LitElement, html, css } from 'lit-element';
-import { navigator } from 'lit-element-router';
 
-export class Card extends navigator(LitElement) {
+export class CourseCard extends LitElement {
 
 	static get properties() {
 		return {
@@ -52,9 +51,14 @@ export class Card extends navigator(LitElement) {
 
 	_handleClick(e) {
 		e.preventDefault();
-		this.navigate(`course/${this.identifier}`);
+		this.dispatchEvent(
+			new CustomEvent(
+				'goodbye-sandra-course-card-select',
+				{ bubbles: true, composd: true, detail: {id: this.identifier} }
+			)
+		);
 	}
 
 }
 
-customElements.define('goodbye-sandra-card', Card);
+customElements.define('goodbye-sandra-course-card', CourseCard);
