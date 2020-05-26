@@ -6,8 +6,9 @@ import 'd2l-navigation/d2l-navigation-main-header.js';
 import 'd2l-navigation/d2l-navigation-main-footer.js';
 import 'd2l-navigation/d2l-navigation-separator.js';
 import { LitElement, html, css } from 'lit-element';
+import { navigator } from 'lit-element-router';
 
-export class Navigation extends LitElement {
+export class Navigation extends navigator(LitElement) {
 
 	static get styles() {
 		return css`
@@ -18,6 +19,7 @@ export class Navigation extends LitElement {
 				align-items: center;
 				display: flex;
 				flex: 0 1 auto;
+				height: 100%;
 			}
 			.course-name {
 				color: var(--d2l-color-ferrite);
@@ -31,7 +33,7 @@ export class Navigation extends LitElement {
 			<d2l-navigation>
 				<d2l-navigation-main-header>
 					<div slot="left" class="left-wrapper">
-						<d2l-navigation-link-image src="assets/gaudi.png" text="Gaudi" slim></d2l-navigation-link-image>
+						<d2l-navigation-link-image src="assets/gaudi.png" text="Gaudi" href="/" @click="${this._handleLogoClick}" slim></d2l-navigation-link-image>
 						<d2l-navigation-separator></d2l-navigation-separator>
 						<div class="course-name">Farewell Sandra!</div>
 					</div>
@@ -44,6 +46,11 @@ export class Navigation extends LitElement {
 				</d2l-navigation-main-footer>
 			</d2l-navigation>
 		`;
+	}
+
+	_handleLogoClick(e) {
+		e.preventDefault();
+		this.navigate('/');
 	}
 
 }
