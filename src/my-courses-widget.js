@@ -3,8 +3,15 @@ import './course-card.js';
 import './widget.js';
 import { LitElement, html, css } from 'lit-element';
 import { courses } from './data.js';
+import { outlet } from 'lit-element-router';
 
-export class MyCoursesWidget extends LitElement {
+export class MyCoursesWidget extends outlet(LitElement) {
+
+	static get properties() {
+		return {
+			activeCourse: {type: String, attribute: 'active-course'}
+		}
+	}
 
 	static get styles() {
 		return css`
@@ -31,6 +38,7 @@ export class MyCoursesWidget extends LitElement {
 					}))}
 				</div>
 			</goodbye-sandra-widget>
+			<goodbye-sandra-course-overlay route="course" identifier="${this.activeCourse}"></goodbye-sandra-course-overlay>
 		`;
 	}
 

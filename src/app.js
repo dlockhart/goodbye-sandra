@@ -1,7 +1,5 @@
 import './announcements-widget.js';
-import './app-main.js';
 import './calendar-widget.js';
-import './course-overlay.js';
 import './my-courses-widget.js';
 import './navigation.js';
 import { LitElement, html, css } from 'lit-element';
@@ -76,21 +74,18 @@ export class App extends router(LitElement) {
 
 	render() {
 		return html`
-			<goodbye-sandra-app-main active-route="${this.route}">
-				<header>
-					<goodbye-sandra-nav></goodbye-sandra-nav>
-				</header>
-				<main>
-					<div class="page-padding">
-						<div class="homepage">
-							<goodbye-sandra-my-courses-widget></goodbye-sandra-my-courses-widget>
-							<goodbye-sandra-announcements-widget></goodbye-sandra-announcements-widget>
-							<goodbye-sandra-calendar-widget></goodbye-sandra-calendar-widget>
-						</div>
+			<header>
+				<goodbye-sandra-nav></goodbye-sandra-nav>
+			</header>
+			<main>
+				<div class="page-padding">
+					<div class="homepage">
+						<goodbye-sandra-my-courses-widget active-route="${this.route}" active-course="${this.params.id}"></goodbye-sandra-my-courses-widget>
+						<goodbye-sandra-announcements-widget></goodbye-sandra-announcements-widget>
+						<goodbye-sandra-calendar-widget></goodbye-sandra-calendar-widget>
 					</div>
-				</main>
-				<goodbye-sandra-course-overlay route="course" identifier="${this.params.id}"></goodbye-sandra-course-overlay>
-			</goodbye-sandra-app-main>
+				</div>
+			</main>
 		`;
 	}
 
