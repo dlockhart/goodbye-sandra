@@ -1,7 +1,8 @@
-
+import './announcements-widget.js';
 import './app-main.js';
+import './calendar-widget.js';
 import './course-overlay.js';
-import './my-courses.js';
+import './my-courses-widget.js';
 import './navigation.js';
 import { LitElement, html, css } from 'lit-element';
 import { router } from 'lit-element-router';
@@ -42,8 +43,26 @@ export class App extends router(LitElement) {
 				margin: 0 auto;
 				max-width: 1230px;
 			}
-			.main-padding {
+			.page-padding {
 				padding: 10px 30px;
+			}
+			.homepage {
+				column-gap: 60px;
+				display: grid;
+				grid-template-columns: 50% 50%;
+				grid-template-rows: auto auto;
+				grid-template-areas:
+					"courses courses"
+					"announcements calendar";
+			}
+			goodbye-sandra-my-courses-widget {
+				grid-area: courses;
+			}
+			goodbye-sandra-announcements-widget {
+				grid-area: announcements;
+			}
+			goodbye-sandra-calendar-widget {
+				grid-area: calendar;
 			}
 		`;
 	}
@@ -62,8 +81,12 @@ export class App extends router(LitElement) {
 					<goodbye-sandra-nav></goodbye-sandra-nav>
 				</header>
 				<main>
-					<div class="main-padding">
-						<goodbye-sandra-my-courses></goodbye-sandra-my-courses>
+					<div class="page-padding">
+						<div class="homepage">
+							<goodbye-sandra-my-courses-widget></goodbye-sandra-my-courses-widget>
+							<goodbye-sandra-announcements-widget></goodbye-sandra-announcements-widget>
+							<goodbye-sandra-calendar-widget></goodbye-sandra-calendar-widget>
+						</div>
 					</div>
 				</main>
 				<goodbye-sandra-course-overlay route="course" identifier="${this.params.id}"></goodbye-sandra-course-overlay>
