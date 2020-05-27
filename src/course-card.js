@@ -7,7 +7,6 @@ export class CourseCard extends LitElement {
 	static get properties() {
 		return {
 			identifier: { type: String },
-			image: { type: String },
 			text: { type: String }
 		};
 	}
@@ -40,9 +39,9 @@ export class CourseCard extends LitElement {
 
 	render() {
 		return html`
-			<d2l-card text="${this.text}" href="course/${this.identifier}" @click="${this._handleClick}">
+			<d2l-card text="${this.text}" href="#" @click="${this._handleClick}">
 				<div class="card-header" slot="header">
-					<img src="assets/course-images/${this.image}-sm.png" alt="">
+					<img src="assets/courses/${this.identifier}-sm.png" alt="">
 				</div>
 				<div class="card-content" slot="content">${this.text}</div>
 			</d2l-card>
