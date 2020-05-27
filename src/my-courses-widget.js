@@ -25,6 +25,16 @@ export class MyCoursesWidget extends LitElement {
 				grid-column-gap: 15px;
 				grid-template-columns: repeat(3, 1fr);
 			}
+			@media (max-width: 850px) {
+				.card-grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+			@media (max-width: 465px) {
+				.card-grid {
+					grid-template-columns: repeat(1, 1fr);
+				}
+			}
 			.author-picture {
 				border: 1px solid var(--d2l-color-galena);
 				border-radius: 10px;

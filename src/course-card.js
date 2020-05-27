@@ -16,6 +16,7 @@ export class CourseCard extends LitElement {
 			:host {
 				display: block;
 				padding-bottom: 0.75rem;
+				width: 100%;
 			}
 			.card-content {
 				overflow: hidden;
@@ -24,9 +25,6 @@ export class CourseCard extends LitElement {
 				display: flex;
 				flex-direction: column;
 				margin: -0.35rem 0 -.1rem -0%.05rem;
-			}
-			.card-header {
-				height: 100px;
 			}
 			img {
 				object-fit: cover;
@@ -40,9 +38,7 @@ export class CourseCard extends LitElement {
 	render() {
 		return html`
 			<d2l-card text="${this.text}" href="#" @click="${this._handleClick}">
-				<div class="card-header" slot="header">
-					<img src="assets/courses/${this.identifier}-sm.png" alt="">
-				</div>
+				<img src="assets/courses/${this.identifier}-sm.png" alt="" slot="header">
 				<div class="card-content" slot="content">${this.text}</div>
 			</d2l-card>
 		`;
