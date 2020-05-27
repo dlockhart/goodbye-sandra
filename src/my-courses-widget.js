@@ -106,9 +106,9 @@ export class MyCoursesWidget extends LitElement {
 		
 		return html`
 			<d2l-dialog title-text="${activeCourseData.name}" @d2l-dialog-close="${this._handleDialogClose}" opened>
-				<img src="assets/courses/${activeCourseData.id}-lg.jpg" alt="" class="course-picture">
+				<img src="assets/courses/${activeCourseData.id}-lg.jpg" alt="" class="course-picture" tabindex="-1">
 				<blockquote class="blockquote">
-					<img src="assets/users/${activeCourseData.author.id}.png" alt="" class="author-picture">
+					<img src="assets/users/${activeCourseData.author.id}.png" alt="" class="author-picture" tabindex="-1">
 					<p>${activeCourseData.message}</p>
 					<footer>&mdash;${activeCourseData.author.name}</footer>
 				</blockquote>

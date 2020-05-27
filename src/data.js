@@ -27,8 +27,8 @@ export const courses = [
 		message: 'Test test test 3.'
 	},
 	{
-		id: 'course4',
-		name: 'Course 4',
+		id: 'slo-mo',
+		name: 'Slo Mo No Mo',
 		author: {
 			id: 'dlockhart',
 			name: 'Dave Lockhart'
@@ -45,16 +45,25 @@ export const courses = [
 		message: 'Test test test 5.'
 	},
 	{
-		id: 'course6',
-		name: 'Course 6',
+		id: 'browser-buddies',
+		name: 'Browser Buddies',
+		author: {
+			id: 'lstewart',
+			name: 'Laura Stewart'
+		},
+		message: 'I\'m sad to see you leave but so happy for your new opportunity. Taking a leap and moving to a new company after so long at D2L must be a little scary but I know you will excel. Thanks for all the guidance and good times!'
+	},
+	{
+		id: 'course7',
+		name: 'Course 7',
 		author: {
 			id: 'mpeacocke',
 			name: 'Margaree Peacocke'
 		},
-		message: 'Test test test 6.'
+		message: 'Test test test 7.'
 	},
 	{
-		id: 'course7',
+		id: 'daylight-done',
 		name: 'Daylight Done',
 		author: {
 			id: 'mweiss',
@@ -63,21 +72,21 @@ export const courses = [
 		message: 'I was "Daylighted" to work on the Daylight project. Sandra\'s ability to keep us focused was key to pushing out an amazing product update that clients loved. Capped off with a most memorable drink order by Sandra, a Beermageddon Paddletron 3000 for the team!!!'
 	},
 	{
-		id: 'course8',
-		name: 'Course 8',
+		id: 'course9',
+		name: 'Course 9',
 		author: {
 			id: 'sakulick',
 			name: 'Scy Akulick'
 		},
-		message: 'Test test test 8.'
+		message: 'Test test test 9.'
 	},
 	{
-		id: 'course9',
-		name: 'Course 9',
+		id: 'course10',
+		name: 'Course 10',
 		author: {
 			id: 'svanherk',
 			name: 'Stacey Van Herk'
 		},
-		message: 'Test test test 2.'
+		message: 'Test test test 10.'
 	}
 ];
