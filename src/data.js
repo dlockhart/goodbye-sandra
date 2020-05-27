@@ -55,12 +55,12 @@ export const courses = [
 	},
 	{
 		id: 'course7',
-		name: 'Course 7',
+		name: 'Daylight Done',
 		author: {
 			id: 'mweiss',
 			name: 'Mark Weiss'
 		},
-		message: 'Test test test 7.'
+		message: 'I was "Daylighted" to work on the Daylight project. Sandra\'s ability to keep us focused was key to pushing out an amazing product update that clients loved. Capped off with a most memorable drink order by Sandra, a Beermageddon Paddletron 3000 for the team!!!'
 	},
 	{
 		id: 'course8',
