@@ -50,7 +50,6 @@ export class CalendarWidget extends LitElement {
 
 	render() {
 		const activeEvents = events.filter(event => event.date === this._activeDay);
-		console.log(activeEvents);
 		let eventList = activeEvents.map(
 			event => {
 				return html`<p><b>${event.time}</b> - ${event.text}</p>`;
