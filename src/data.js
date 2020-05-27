@@ -3,14 +3,20 @@ export const courses = [
 		id: 'course-1',
 		name: 'Course 1',
 		image: 'axe',
-		person: 'Person 1',
+		author: {
+			id: 'dlockhart',
+			name: 'Dave Lockhart'
+		},
 		message: 'Test test test.'
 	},
 	{
 		id: 'course-2',
 		name: 'Course 2',
 		image: 'dawgs',
-		person: 'Person 2',
+		author: {
+			id: 'dlockhart',
+			name: 'Dave Lockhart'
+		},
 		message: 'Test test test 2.'
 	}
 ];

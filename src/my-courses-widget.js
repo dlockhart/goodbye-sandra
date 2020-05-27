@@ -45,32 +45,24 @@ export class MyCoursesWidget extends LitElement {
 	_getDialogView() {
 		
 		const activeCourseData = courses.find((c) => c.id === this._activeCourseId);
-
-		let title = '';
-		let opened = false;
-		let content = null;
-		if (activeCourseData) {
-			title = activeCourseData.name;
-			opened = true;
-			content = html`
-				<img src="assets/course-images/${activeCourseData.image}-lg.png" style="width: 100%;">
-				<p>Hello</p>
-			`;
+		if (!activeCourseData) {
+			return null;
 		}
 		
 		return html`
-			<d2l-dialog title-text="${title}" ?opened="${opened}" @d2l-dialog-close="${this._handleDialogClose}">
-				${content}
+			<d2l-dialog title-text="${activeCourseData.name}" opened @d2l-dialog-close="${this._handleDialogClose}">
+				<img src="assets/courses/${activeCourseData.image}-lg.png" alt="" style="width: 100%;">
+				<blockquote>
+					<img src="assets/users/${activeCourseData.author.id}.png" alt="" style="width: 100px;">
+					<p>${activeCourseData.message}</p>
+					<footer>${activeCourseData.author.name}</footer>
+				</blockquote>
 			</d2l-dialog>`;
 
 	}
 
 	_handleCourseCardSelect(e) {
 		this._activeCourseId = e.detail.id;
-		// TODO: fix this somehow
-		setTimeout(() => {
-			this.shadowRoot.querySelector('d2l-dialog').resize();
-		}, 100);
 	}
 
 	_handleDialogClose() {
