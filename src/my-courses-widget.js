@@ -7,6 +7,16 @@ import './widget.js';
 import { LitElement, html, css } from 'lit-element';
 import { courses } from './data.js';
 
+let isShufled = false;
+function shuffleCourses() {
+	if (isShufled) return courses;
+	isShufled = true;
+	for (let i = courses.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[courses[i], courses[j]] = [courses[j], courses[i]];
+	}
+}
+
 export class MyCoursesWidget extends LitElement {
 
 	static get properties() {
@@ -83,6 +93,7 @@ export class MyCoursesWidget extends LitElement {
 	}
 
 	render() {
+		shuffleCourses();
 		return html`
 			<goodbye-sandra-widget name="My Courses" @goodbye-sandra-course-card-select="${this._handleCourseCardSelect}">
 				<div class="card-grid">
