@@ -12,6 +12,7 @@ const events = [
 	{ date: 'May 21, 2020', time: '1:00 PM to 3:30 PM', text: 'Global Accessibility Awareness Day - Internal Demo Day' },
 	{ date: 'May 21, 2020', time: '3:30 PM to 4:30 PM', text: 'Last D2L Town Hall' },
 	{ date: 'May 22, 2020', time: '1:00 PM to 2:00 PM', text: 'I am an accessibility expert, AMA - Carin Headrick, Jeff Geurts, Maya Jones, Sam Chandrashekar, and Sandra Earl' },
+	{ date: 'May 22, 2020', time: '4:30 PM to 5:00 PM', text: 'Handoff Browser Support Work to Laura' },
 	{ date: 'May 27, 2020', time: '4:00 PM to 5:00 PM', text: 'Farewell [Virtual] Drinks' },
 	{ date: 'May 29, 2020', time: '12:00 PM to 1:30 PM', text: 'Goodbye Lunch with Gaudi' },
 	{ date: 'May 29, 2020', time: '2:30 PM to 3:00 PM', text: 'Last UX Dev & Design Demo' },
@@ -58,7 +59,7 @@ export class CalendarWidget extends LitElement {
 		if (eventList.length === 0) {
 			eventList = html`<p>There are no events to display.</p>`
 		}
-		console.log(eventList);
+
 		return html`
 			<goodbye-sandra-widget name="Calendar">
 				<goodbye-sandra-calendar
