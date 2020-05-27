@@ -30,6 +30,14 @@ export class App extends LitElement {
 					"courses courses"
 					"announcements calendar";
 			}
+			@media (max-width: 850px) {
+				.homepage {
+					grid-template-areas:
+					"courses courses"
+					"announcements announcements"
+					"calendar calendar";
+				}
+			}
 			goodbye-sandra-my-courses-widget {
 				grid-area: courses;
 			}
