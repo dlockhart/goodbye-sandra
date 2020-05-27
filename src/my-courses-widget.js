@@ -25,6 +25,16 @@ export class MyCoursesWidget extends LitElement {
 				grid-column-gap: 15px;
 				grid-template-columns: repeat(3, 1fr);
 			}
+			@media (max-width: 850px) {
+				.card-grid {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+			@media (max-width: 465px) {
+				.card-grid {
+					grid-template-columns: repeat(1, 1fr);
+				}
+			}
 			.author-picture {
 				border: 1px solid var(--d2l-color-galena);
 				border-radius: 10px;
@@ -96,9 +106,9 @@ export class MyCoursesWidget extends LitElement {
 		
 		return html`
 			<d2l-dialog title-text="${activeCourseData.name}" @d2l-dialog-close="${this._handleDialogClose}" opened>
-				<img src="assets/courses/${activeCourseData.id}-lg.jpg" alt="" class="course-picture">
+				<img src="assets/courses/${activeCourseData.id}-lg.jpg" alt="" class="course-picture" tabindex="-1">
 				<blockquote class="blockquote">
-					<img src="assets/users/${activeCourseData.author.id}.png" alt="" class="author-picture">
+					<img src="assets/users/${activeCourseData.author.id}.png" alt="" class="author-picture" tabindex="-1">
 					<p>${activeCourseData.message}</p>
 					<footer>&mdash;${activeCourseData.author.name}</footer>
 				</blockquote>
