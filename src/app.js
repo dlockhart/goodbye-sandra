@@ -22,9 +22,9 @@ export class App extends LitElement {
 				padding: 10px 30px;
 			}
 			.homepage {
-				column-gap: 60px;
+				column-gap: 10%;
 				display: grid;
-				grid-template-columns: 50% 50%;
+				grid-template-columns: 45% 45%;
 				grid-template-rows: auto auto;
 				grid-template-areas:
 					"courses courses"
