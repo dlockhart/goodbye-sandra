@@ -48,16 +48,15 @@ export class MyCoursesWidget extends LitElement {
 			.author-picture {
 				border: 1px solid var(--d2l-color-galena);
 				border-radius: 10px;
-				height: 100px;
 				position: absolute;
 				right: 5px;
 				top: 5px;
-				width: 100px;
 			}
 			.course-picture {
 				border: 1px solid var(--d2l-color-galena);
-				height: 338px;
-				width: 540px;
+				height: auto;
+				max-width: 100%;
+				width: 100%;
 			}
 			.blockquote {
 				background: var(--d2l-color-gypsum);
@@ -117,9 +116,9 @@ export class MyCoursesWidget extends LitElement {
 		
 		return html`
 			<d2l-dialog title-text="${activeCourseData.name}" @d2l-dialog-close="${this._handleDialogClose}" opened>
-				<img src="assets/courses/${activeCourseData.id}-lg.jpg" alt="" class="course-picture" tabindex="-1">
+				<img src="assets/courses/${activeCourseData.id}-lg.jpg" alt="" class="course-picture" tabindex="-1" width="540" height="338">
 				<blockquote class="blockquote">
-					<img src="assets/users/${activeCourseData.author.id}.png" alt="" class="author-picture" tabindex="-1">
+					<img src="assets/users/${activeCourseData.author.id}.png" alt="" class="author-picture" tabindex="-1" width="100" height="100">
 					<p>${activeCourseData.message}</p>
 					<footer>&mdash;${activeCourseData.author.name}</footer>
 				</blockquote>
