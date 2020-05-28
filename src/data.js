@@ -10,7 +10,7 @@ export const courses = [
 	},
 	{
 		id: 'course2',
-		name: 'Course 2',
+		name: 'The Force is strong with this one',
 		author: {
 			id: 'cbellini',
 			name: 'Chris Bellini'
