@@ -19,12 +19,12 @@ export const courses = [
 	},
 	{
 		id: 'course3',
-		name: 'Course 3',
+		name: 'Shark Infested Waters',
 		author: {
 			id: 'dbatiste',
 			name: 'Dave Batiste'
 		},
-		message: 'Test test test 3.'
+		message: 'Sharky seems ferocious but Mark tells me he prefers "Shark Food" over PMs. If you ever decide to come back, we\'ll be sure to keep him well fed.  We\'re gonna miss you lots Sandra, but I know you\'ll be amazing in your new role!'
 	},
 	{
 		id: 'slo-mo',
@@ -73,12 +73,12 @@ export const courses = [
 	},
 	{
 		id: 'course9',
-		name: 'Course 9',
+		name: 'Put it on the BBQ Train',
 		author: {
 			id: 'sakulick',
 			name: 'Scy Akulick'
 		},
-		message: 'Test test test 9.'
+		message: 'It was brief, but it was fun! Seeing all of these snapshots of your time with D2L, it\'s too bad we never got to share a BBQ or throw axes together - your new team is getting someone pretty awesome. :) Good luck at Shopify!'
 	},
 	{
 		id: 'course10',
@@ -132,6 +132,6 @@ export const navLinks = [
 		id: 'polish-project',
 		name: 'Polish',
 		width: 1040,
-		height: 543
+		height: 770
 	}
 ];
