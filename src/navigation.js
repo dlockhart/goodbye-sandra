@@ -183,7 +183,7 @@ export class Navigation extends LitElement {
 						<h1 class="course-name hide-for-small-screens">Farewell Sandra!</h1>
 					</div>
 					<div slot="right">
-						<d2l-navigation-link-image src="assets/user-image-set.png" text="Sandra Earl" slim></d2l-navigation-link-image><span class="hide-for-small-screens">Sandra Earl</span>
+						<d2l-navigation-link-image src="assets/user-image-set.png" text="toilet" slim></d2l-navigation-link-image><span class="hide-for-small-screens">Sandra Earl</span>
 					</div>
 				</d2l-navigation-main-header>
 				<d2l-navigation-main-footer>

@@ -39,6 +39,11 @@ export class App extends LitElement {
 					"col2 col2";
 				}
 			}
+			@media (max-width: 767px) {
+				.page-padding {
+					padding: 0 15px;
+				}
+			}
 			goodbye-sandra-my-courses-widget {
 				grid-area: courses;
 			}
