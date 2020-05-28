@@ -135,3 +135,54 @@ export const navLinks = [
 		height: 770
 	}
 ];
+
+export const pictureLibraryPhotos = [
+	{
+		id: 'afterparty',
+		caption: 'Winterfests afterparties were legendary.',
+		width: 807,
+		height: 726
+	},
+	{
+		id: 'arabesque',
+		caption: 'Team lunches are\'t complete without a trip to Arabesque!',
+		width: 800,
+		height: 497
+	},
+	{
+		id: 'axe',
+		caption: 'Nothing like some axe throwing to get out that IE11 aggression...',
+		width: 800,
+		height: 477
+	},
+	{
+		id: 'badminton',
+		caption: '4 straight years NOT winning the trophy.',
+		width: 800,
+		height: 413
+	},
+	{
+		id: 'dawgs',
+		caption: 'Slo Mo and DLo may be in retirement, but the D2L Dawgs will live on as champions!',
+		width: 720,
+		height: 537
+	},
+	{
+		id: 'cold',
+		caption: 'Gaudi BBQs go ahead: rain, shine or frigid.',
+		width: 800,
+		height: 597
+	},
+	{
+		id: 'fusion',
+		caption: 'Daylight rollout going over well with clients at Fusion.',
+		width: 800,
+		height: 432
+	},
+	{
+		id: 'fusion2',
+		caption: 'What happens in Vegas, stays in Vegas.',
+		width: 800,
+		height: 479
+	}
+]

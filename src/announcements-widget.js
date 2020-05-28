@@ -48,7 +48,12 @@ export class AnnouncementsWidget extends LitElement {
 				<h3 class="d2l-heading-3">Local employers boost winning ways with staff</h3>
 				<p class="d2l-body-small">Nov 6, 2010</p>
 				<img src="../assets/announcements/record.jpg" width="640" height="396">
-				<p>After posing for 1000 different versions of this photo, only Sandra looked like her face muscles weren't permanently frozen in a twitchy smile.</p>
+				<p>Unfortunately after posing for 1000 different versions of this photo over an hour, the staff were left with severe face muscle damage, resulting in permanently twitchy smiles.</p>
+				<hr>
+				<h3 class="d2l-heading-3">Mystery drummer ghosts coworkers</h3>
+				<p class="d2l-body-small">Dec 10, 2006</p>
+				<img src="../assets/announcements/drums.jpg" width="640" height="477">
+				<p>An employee at a local company's holiday office party performed a surprise drum solo for her coworkers, much to the annoyance of the band who owned the equipment. Shortly following the performance she vanished, leaving only a trail of golden flakes.</p>
 			</goodbye-sandra-widget>
 		`;
 	}
