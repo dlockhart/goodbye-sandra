@@ -21,7 +21,7 @@ export class PictureLibraryWidget extends LitElement {
 	static get properties() {
 		return {
 			position: { type: Number },
-			_activePictureId: { type: String }
+			_dialogOpened: { type: Boolean }
 		}
 	}
 
@@ -51,6 +51,7 @@ export class PictureLibraryWidget extends LitElement {
 	constructor() {
 		super();
 		this.position = 0;
+		this._dialogOpened = false;
 	}
 
 	render() {
@@ -68,30 +69,22 @@ export class PictureLibraryWidget extends LitElement {
 					<figcaption>${picture.caption}</figcaption>
 				</figure>
 			</goodbye-sandra-widget>
-			${this._getDialogView()}
-		`;
-	}
-
-	_getDialogView() {
-		
-		const picture = pictureLibraryPhotos.find((c) => c.id === this._activePictureId);
-		if (!picture) {
-			return null;
-		}
-		
-		return html`
-			<d2l-dialog title-text="Picture Library" @d2l-dialog-close="${this._handleDialogClose}" opened width="860">
+			<d2l-dialog title-text="Picture Library" @d2l-dialog-close="${this._handleDialogClose}" ?opened="${this._dialogOpened}" width="860">
 				<figure>
 					<img src="assets/library/${picture.id}.jpg" alt="${picture.caption}" width="${picture.width}" height="${picture.height}" tabindex="-1">
 					<figcaption>${picture.caption}</figcaption>
 				</figure>
-				<d2l-button slot="footer" data-dialog-action="done" primary>Done</d2l-button>
-			</d2l-dialog>`;
-
+				<d2l-button slot="footer" data-dialog-action="done" primary>Close</d2l-button>
+				<div slot="footer" style="float:right">
+					<d2l-button @click="${this._prev}" ?disabled="${prevIsDisabled}">Previous</d2l-button>
+					<d2l-button @click="${this._next}" ?disabled="${nextIsDisabled}">Next</d2l-button>
+				</div>
+			</d2l-dialog>
+		`;
 	}
 
 	_handleDialogClose() {
-		this._activePictureId = '';
+		this._dialogOpened = false;
 	}
 
 	_next() {
@@ -103,7 +96,7 @@ export class PictureLibraryWidget extends LitElement {
 	}
 
 	_selectPicture() {
-		this._activePictureId = pictureLibraryPhotos[this.position].id;
+		this._dialogOpened = true;
 	}
 
 }
