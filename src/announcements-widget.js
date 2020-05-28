@@ -7,7 +7,7 @@ import '@brightspace-ui/core/components/colors/colors.js';
 export class AnnouncementsWidget extends LitElement {
 
 	static get styles() {
-		return css`
+		return [bodySmallStyles, heading4Styles, css`
 			:host {
 				display: block;
 			}
@@ -22,7 +22,7 @@ export class AnnouncementsWidget extends LitElement {
 				background-color:var(--d2l-color-mica);
 				margin: 1.5rem 0;
 			}
-		`;
+		`];
 	}
 
 	render() {
