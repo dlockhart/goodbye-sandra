@@ -1,5 +1,7 @@
 
+import '@brightspace-ui/core/components/button/button.js';
 import '@brightspace-ui/core/components/colors/colors.js';
+import '@brightspace-ui/core/components/dialog/dialog.js';
 import 'd2l-navigation/d2l-navigation.js';
 import 'd2l-navigation/d2l-navigation-link-image.js';
 import 'd2l-navigation/d2l-navigation-main-header.js';
@@ -9,11 +11,15 @@ import 'd2l-navigation/d2l-navigation-separator.js';
 import { LitElement, html, css } from 'lit-element';
 import { bodySmallStyles } from '@brightspace-ui/core/components/typography/styles.js';
 
+const navLinks = ['Quizzes', 'Picture Library', 'Personal Dashboard'];
+
 export class Navigation extends LitElement {
 
 	static get properties() {
 		return {
+			_activeLink: { type: String, attribute: false },
 			_showOrgTabs: { type: Boolean, attribute: false }
+
 		}
 	}
 
@@ -121,6 +127,29 @@ export class Navigation extends LitElement {
 				top: -1px;
 				width: auto;
 			}
+
+			.d2l-navigation-main-wrapper {
+				align-items: center;
+				display: flex;
+				height: calc(1rem + 40px);
+				flex-wrap: nowrap;
+				transition: opacity .2s ease-in;
+			}
+			.d2l-navigation-item {
+				display: inline-block;
+				margin-right: 30px;
+				white-space: nowrap;
+			}
+			.d2l-navigation-link {
+				color: #494c4e;
+				cursor: pointer;
+    			text-decoration: none;
+			}
+			.d2l-navigation-link:focus, a.d2l-navigation-link:hover {
+				color: #006fbf;
+				outline: none;
+				text-decoration: underline;
+			}
 		`];
 	}
 
@@ -157,11 +186,47 @@ export class Navigation extends LitElement {
 					</div>
 				</d2l-navigation-main-header>
 				<d2l-navigation-main-footer>
-					<div slot="main">Nav Footer</div>
+					<div slot="main" class="d2l-navigation-main-wrapper" role="list">
+						${navLinks.map( link => {
+							return html`
+							<div class="d2l-navigation-item" role="listitem">
+								<a id="${link}" href="javascript:void(0);" @click="${this._handleNavLinkClick}" class="d2l-navigation-link">${link}</a>
+							</div>
+							`;
+						})}
+					</div>
 				</d2l-navigation-main-footer>
 			</d2l-navigation>
+			${this._getDialogView()}
 		`;
 	}
+
+	_getDialogView() {
+		if (!this._activeLink) {
+			return null;
+		}
+		
+		return html`
+			<d2l-dialog title-text="${this._activeLink}" @d2l-dialog-open="${this._handleDialogOpen}" @d2l-dialog-close="${this._handleDialogClose}" opened width="1100">
+				<img src="assets/tools/${this._activeLink}.png" alt="" class="tool-picture" tabindex="-1" width="100%" height="auto">
+				<d2l-button slot="footer" data-dialog-action="done" primary>Done</d2l-button>
+			</d2l-dialog>`;
+	}
+
+	_handleDialogOpen() {
+		requestAnimationFrame(() => {
+			this.shadowRoot.querySelector('d2l-dialog').resize();
+		});
+	}
+
+	_handleDialogClose() {
+		this._activeLink = '';
+	}
+
+	_handleNavLinkClick(e) {
+		this._activeLink = e.composedPath()[0].id;
+	}
+	
 
 }
 
