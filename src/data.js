@@ -33,7 +33,7 @@ export const courses = [
 			id: 'dlockhart',
 			name: 'Dave Lockhart'
 		},
-		message: 'Test test test 4.'
+		message: 'It\'s been so fun "growing up" together -- both in our career-lives and personal lives. Endless celebrations of new roles, titles, projects, responsibilities, teams and managers intermingled with new houses, weddings, puppies and babies. When you started at D2L you didn\'t want to mix work & pleasure, and I\'m thankful that didn\'t happen! See you at the cottage!'
 	},
 	{
 		id: 'daylightptsd',
