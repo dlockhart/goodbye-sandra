@@ -36,13 +36,13 @@ export const courses = [
 		message: 'Test test test 4.'
 	},
 	{
-		id: 'course5',
-		name: 'Course 5',
+		id: 'daylightptsd',
+		name: 'Daylight PTSD is a thing',
 		author: {
 			id: 'jgeurts',
 			name: 'Jeff Geurts'
 		},
-		message: 'Test test test 5.'
+		message: "Good luck at Shopify! I'm gonna miss you around here, and D2L is losing a real champion of the people. If you're looking at this years and years from now and the site is miraculously still up, remember Daylight and how you totally nailed it. Remember all the people you helped by making an awesomely accessible product! And don't be a stranger :)"
 	},
 	{
 		id: 'browser-buddies',
@@ -88,5 +88,23 @@ export const courses = [
 			name: 'Stacey Van Herk'
 		},
 		message: 'Test test test 10.'
+	},
+	{
+		id: 'merrychristmas-uxp',
+		name: 'Merry Christmas!',
+		author: {
+			id: 'merrychristmas-uxp',
+			name: 'UXP'
+		},
+		message: 'Merry Christmas from your friends in UXP!'
+	},
+	{
+		id: 'bluebeanieday2009',
+		name: 'First Blue Beanie Day!',
+		author: {
+			id: 'jgeurts',
+			name: 'Jeff Geurts'
+		},
+		message: "I think this was our first blue beanie day, back in 2009! At least it's the first one I remember, and I'm lucky enough to have a photo of it :)"
 	}
 ];
