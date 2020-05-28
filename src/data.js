@@ -73,12 +73,12 @@ export const courses = [
 	},
 	{
 		id: 'course9',
-		name: 'Course 9',
+		name: 'Put it on the BBQ Train',
 		author: {
 			id: 'sakulick',
 			name: 'Scy Akulick'
 		},
-		message: 'Test test test 9.'
+		message: 'It was brief, but it was fun! Seeing all of these snapshots of your time with D2L, it\'s too bad we never got to share a BBQ or throw axes together - your new team is getting someone pretty awesome. :) Good luck at Shopify!'
 	},
 	{
 		id: 'course10',
