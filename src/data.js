@@ -88,24 +88,6 @@ export const courses = [
 			name: 'Stacey Van Herk'
 		},
 		message: 'Test test test 10.'
-	},
-	{
-		id: 'merrychristmas-uxp',
-		name: 'Merry Christmas!',
-		author: {
-			id: 'merrychristmas-uxp',
-			name: 'UXP'
-		},
-		message: 'Merry Christmas from your friends in UXP!'
-	},
-	{
-		id: 'bluebeanieday2009',
-		name: 'First Blue Beanie Day!',
-		author: {
-			id: 'jgeurts',
-			name: 'Jeff Geurts'
-		},
-		message: "I think this was our first blue beanie day, back in 2009! At least it's the first one I remember, and I'm lucky enough to have a photo of it :)"
 	}
 ];
 
@@ -160,6 +142,18 @@ export const pictureLibraryPhotos = [
 		caption: '4 straight years NOT winning the trophy.',
 		width: 800,
 		height: 413
+	},
+	{
+		id: 'bluebeanie',
+		caption: 'Possibly the very first Blue Beanie Day at D2L, back in 2009!',
+		width: 800,
+		height: 472
+	},
+	{
+		id: 'christmas',
+		caption: 'Only Claudio could get a bunch of tech employees out of the office for a family Chritmas photo.',
+		width: 600,
+		height: 800
 	},
 	{
 		id: 'dawgs',
