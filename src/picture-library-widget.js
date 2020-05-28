@@ -41,6 +41,7 @@ export class PictureLibraryWidget extends LitElement {
 			figure {
 				cursor: zoom-in;
 				margin: 0;
+				text-align: center;
 			}
 			figcaption {
 				color: var(--d2l-color-galena);
@@ -90,10 +91,19 @@ export class PictureLibraryWidget extends LitElement {
 
 	_next() {
 		this.position++;
+		this._resizeDialog();
+	}
+
+	async _resizeDialog() {
+		await this.updateComplete;
+		setTimeout(() => {
+			this.shadowRoot.querySelector('d2l-dialog').resize();
+		}, 100);
 	}
 
 	_prev() {
 		this.position--;
+		this._resizeDialog();
 	}
 
 	_selectPicture() {

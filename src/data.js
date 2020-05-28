@@ -151,7 +151,7 @@ export const pictureLibraryPhotos = [
 	},
 	{
 		id: 'christmas',
-		caption: 'Only Claudio could get a bunch of tech employees out of the office for a family Chritmas photo.',
+		caption: 'Only Claudio could get a bunch of tech employees out of the office for a family Christmas photo.',
 		width: 600,
 		height: 800
 	},
