@@ -15,7 +15,7 @@ export const courses = [
 			id: 'cbellini',
 			name: 'Chris Bellini'
 		},
-		message: 'Although our time working together was relatively short, the lasting impact that you\'ve made on Gaudi, D2L, and its users is easily apparent. Thank you for making me feel welcome on Gaudi when I joined. Best wishes in your new role - you\'ll rock it!'
+		message: 'Although our time working together was relatively short, the lasting impact that you\'ve made on Gaudi, D2L, and its customers and users is easily apparent. Thank you for making me feel welcome on Gaudi when I joined. Best wishes in your new role - you\'ll rock it!'
 	},
 	{
 		id: 'course3',
