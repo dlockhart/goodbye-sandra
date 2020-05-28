@@ -132,6 +132,6 @@ export const navLinks = [
 		id: 'polish-project',
 		name: 'Polish',
 		width: 1040,
-		height: 543
+		height: 770
 	}
 ];
