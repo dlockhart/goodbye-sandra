@@ -38,7 +38,7 @@ export class CourseCard extends LitElement {
 	render() {
 		return html`
 			<d2l-card text="${this.text}" href="#" @click="${this._handleClick}">
-				<img src="assets/courses/${this.identifier}-sm.png" alt="" slot="header">
+				<img src="assets/courses/${this.identifier}-sm.jpg" alt="" slot="header" loading="lazy">
 				<div class="card-content" slot="content">${this.text}</div>
 			</d2l-card>
 		`;

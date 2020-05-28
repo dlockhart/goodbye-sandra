@@ -37,22 +37,22 @@ export class AnnouncementsWidget extends LitElement {
 			<goodbye-sandra-widget name="Announcements">
 				<h3 class="d2l-heading-3">UXP introduces Flannel Fridays</h3>
 				<p class="d2l-body-small">Feb 24, 2012</p>
-				<img src="../assets/announcements/flannel-friday.jpg" width="640" height="403">
+				<img src="../assets/announcements/flannel-friday.jpg" width="640" height="403" alt="" loading="lazy">
 				<p>Flannel Fridays are now a thing! We will DEFINITELY do this every Friday from now on, this is just the beginning! Cough cough.</p>
 				<hr>
 				<h3 class="d2l-heading-3">D2L Earns More Love from NFB</h3>
 				<p class="d2l-body-small">DEC 16, 2011</p>
-				<img src="../assets/announcements/nfb.jpg" width="640" height="427">
+				<img src="../assets/announcements/nfb.jpg" width="640" height="427" alt="" loading="lazy">
 				<p>Desire2Learn Incorporated receives a national award once again in recognition of their continuous commitment to accessibility for visually impaired users based on its latest release of Desire2Learn® Learning Environment.</p>
 				<hr>
 				<h3 class="d2l-heading-3">Local employers boost winning ways with staff</h3>
 				<p class="d2l-body-small">Nov 6, 2010</p>
-				<img src="../assets/announcements/record.jpg" width="640" height="396">
+				<img src="../assets/announcements/record.jpg" width="640" height="396" alt="" loading="lazy">
 				<p>Unfortunately after posing for 1000 different versions of this photo over an hour, the staff were left with severe face muscle damage, resulting in permanently twitchy smiles.</p>
 				<hr>
 				<h3 class="d2l-heading-3">Mystery drummer disappears suddenly</h3>
 				<p class="d2l-body-small">Dec 10, 2006</p>
-				<img src="../assets/announcements/drums.jpg" width="640" height="477">
+				<img src="../assets/announcements/drums.jpg" width="640" height="477" alt="" loading="lazy">
 				<p>An employee at a local company's holiday office party performed a surprise drum solo for her coworkers, much to the annoyance of the band who owned the equipment. Shortly following the performance she vanished, leaving only a trail of golden flakes.</p>
 				<p>In other news, local LCBO stores are experiencing a shortage of Goldschläger.</p>
 			</goodbye-sandra-widget>
