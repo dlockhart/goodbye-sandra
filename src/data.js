@@ -19,12 +19,12 @@ export const courses = [
 	},
 	{
 		id: 'course3',
-		name: 'Course 3',
+		name: 'Shark Infested Waters',
 		author: {
 			id: 'dbatiste',
 			name: 'Dave Batiste'
 		},
-		message: 'Test test test 3.'
+		message: 'Sharky seems ferocious but Mark tells me he prefers "Shark Food" over PMs. If you ever decide to come back, we\'ll be sure to keep him well fed.  We\'re gonna miss you lots Sandra, but I know you\'ll be amazing in your new role!'
 	},
 	{
 		id: 'slo-mo',
