@@ -10,16 +10,14 @@ import 'd2l-navigation/d2l-navigation-notification-icon.js';
 import 'd2l-navigation/d2l-navigation-separator.js';
 import { LitElement, html, css } from 'lit-element';
 import { bodySmallStyles } from '@brightspace-ui/core/components/typography/styles.js';
-
-const navLinks = ['Quizzes', 'Picture Library', 'Personal Dashboard'];
+import { navLinks } from './data.js';
 
 export class Navigation extends LitElement {
 
 	static get properties() {
 		return {
-			_activeLink: { type: String, attribute: false },
+			_activeLinkId: { type: String, attribute: false },
 			_showOrgTabs: { type: Boolean, attribute: false }
-
 		}
 	}
 
@@ -190,7 +188,7 @@ export class Navigation extends LitElement {
 						${navLinks.map( link => {
 							return html`
 							<div class="d2l-navigation-item" role="listitem">
-								<a id="${link}" href="javascript:void(0);" @click="${this._handleNavLinkClick}" class="d2l-navigation-link">${link}</a>
+								<a id="${link.id}" href="javascript:void(0);" @click="${this._handleNavLinkClick}" class="d2l-navigation-link">${link.name}</a>
 							</div>
 							`;
 						})}
@@ -202,29 +200,26 @@ export class Navigation extends LitElement {
 	}
 
 	_getDialogView() {
-		if (!this._activeLink) {
+
+		const activeLinkData = navLinks.find((n) => n.id === this._activeLinkId);
+		if (!activeLinkData) {
 			return null;
 		}
 		
 		return html`
-			<d2l-dialog title-text="${this._activeLink}" @d2l-dialog-open="${this._handleDialogOpen}" @d2l-dialog-close="${this._handleDialogClose}" opened width="1100">
-				<img src="assets/tools/${this._activeLink}.png" alt="" class="tool-picture" tabindex="-1" width="100%" height="auto">
+			<d2l-dialog title-text="${activeLinkData.name}" @d2l-dialog-close="${this._handleDialogClose}" opened width="1100">
+				<img src="assets/tools/${activeLinkData.id}.jpg" alt="" tabindex="-1" width="${activeLinkData.width}" height="${activeLinkData.height}" style="max-width: 100%; height: auto;">
 				<d2l-button slot="footer" data-dialog-action="done" primary>Done</d2l-button>
 			</d2l-dialog>`;
-	}
 
-	_handleDialogOpen() {
-		requestAnimationFrame(() => {
-			this.shadowRoot.querySelector('d2l-dialog').resize();
-		});
 	}
 
 	_handleDialogClose() {
-		this._activeLink = '';
+		this._activeLinkId = '';
 	}
 
 	_handleNavLinkClick(e) {
-		this._activeLink = e.composedPath()[0].id;
+		this._activeLinkId = e.composedPath()[0].id;
 	}
 	
 

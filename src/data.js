@@ -108,3 +108,24 @@ export const courses = [
 		message: "I think this was our first blue beanie day, back in 2009! At least it's the first one I remember, and I'm lucky enough to have a photo of it :)"
 	}
 ];
+
+export const navLinks = [
+	{
+		id: 'quizzes',
+		name: 'Quizzes',
+		width: 1040,
+		height: 987
+	},
+	{
+		id: 'picture-library',
+		name: 'Picture Library',
+		width: 1040,
+		height: 602
+	},
+	{
+		id: 'personal-dashboard',
+		name: 'Personal Dashboard',
+		width: 700,
+		height: 338
+	}
+];
