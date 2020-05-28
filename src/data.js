@@ -55,12 +55,12 @@ export const courses = [
 	},
 	{
 		id: 'course7',
-		name: 'Course 7',
+		name: 'Death to IE11',
 		author: {
 			id: 'mpeacocke',
 			name: 'Margaree Peacocke'
 		},
-		message: 'Test test test 7.'
+		message: 'We will miss you on Gaudi! You were always such a great advocate for everyone on the team and the work that we did. I hope that Shopify is a great move for you and that they appreciate all the awesome things that you can do for them. Thank you for everything that you did for myself, Gaudi, and D2L!'
 	},
 	{
 		id: 'daylight-done',
