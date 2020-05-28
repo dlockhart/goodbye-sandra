@@ -87,6 +87,9 @@ export class Navigation extends LitElement {
 				.d2l-consortium-tab {
 					padding: 0 0.5rem;
 				}
+				.hide-for-small-screens {
+					display: none;
+				}
 			}
 			.d2l-consortium-tab:hover {
 				background-color: rgba(0, 0, 0, .70);
@@ -176,11 +179,11 @@ export class Navigation extends LitElement {
 				<d2l-navigation-main-header>
 					<div slot="left" class="left-wrapper">
 						<d2l-navigation-link-image src="assets/gaudi.png" text="Gaudi" slim></d2l-navigation-link-image>
-						<d2l-navigation-separator></d2l-navigation-separator>
-						<h1 class="course-name">Farewell Sandra!</h1>
+						<d2l-navigation-separator class="hide-for-small-screens"></d2l-navigation-separator>
+						<h1 class="course-name hide-for-small-screens">Farewell Sandra!</h1>
 					</div>
 					<div slot="right">
-						<d2l-navigation-link-image src="assets/user-image-set.png" text="Sandra Earl" slim></d2l-navigation-link-image><span>Sandra Earl</span>
+						<d2l-navigation-link-image src="assets/user-image-set.png" text="Sandra Earl" slim></d2l-navigation-link-image><span class="hide-for-small-screens">Sandra Earl</span>
 					</div>
 				</d2l-navigation-main-header>
 				<d2l-navigation-main-footer>
@@ -205,7 +208,7 @@ export class Navigation extends LitElement {
 		if (!activeLinkData) {
 			return null;
 		}
-		
+
 		return html`
 			<d2l-dialog title-text="${activeLinkData.name}" @d2l-dialog-close="${this._handleDialogClose}" opened width="1100">
 				<img src="assets/tools/${activeLinkData.id}.jpg" alt="" tabindex="-1" width="${activeLinkData.width}" height="${activeLinkData.height}" style="max-width: 100%; height: auto;">
@@ -221,7 +224,7 @@ export class Navigation extends LitElement {
 	_handleNavLinkClick(e) {
 		this._activeLinkId = e.composedPath()[0].id;
 	}
-	
+
 
 }
 
