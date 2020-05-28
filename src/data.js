@@ -1,6 +1,6 @@
 export const courses = [
 	{
-		id: 'course1',
+		id: 'partying',
 		name: 'Partying Hard at Winterfest',
 		author: {
 			id: 'akerr',
@@ -9,7 +9,7 @@ export const courses = [
 		message: 'I didn\'t get as much of an opportunity to work with you as I would have liked but even before joining Gaudi I had heard multiple people speak extremely highly of you and everything you\'ve done for D2L. In my short time on the team its become apparent just how invaluable you are, Shopify is lucky to have you! I couldn\'t find a photo from the one time we went out as a team after I joined but hopefully this one brings back some good memories from partying hard at Winterfest!'
 	},
 	{
-		id: 'course2',
+		id: 'darth',
 		name: 'The Force is strong with this one',
 		author: {
 			id: 'cbellini',
@@ -18,7 +18,7 @@ export const courses = [
 		message: 'Although our time working together was relatively short, the lasting phenomenal impact that you\'ve made on Gaudi, D2L, and its customers and users is easily apparent. Thank you for making me feel welcome on Gaudi when I joined. Best wishes in your new role - you\'ll rock it!'
 	},
 	{
-		id: 'course3',
+		id: 'zoom',
 		name: 'Shark Infested Waters',
 		author: {
 			id: 'dbatiste',
@@ -54,7 +54,7 @@ export const courses = [
 		message: 'I\'m sad to see you leave but so happy for your new opportunity. Taking a leap and moving to a new company after so long at D2L must be a little scary but I know you will excel. Thanks for all the guidance and good times!'
 	},
 	{
-		id: 'course7',
+		id: 'axe',
 		name: 'Death to IE11',
 		author: {
 			id: 'mpeacocke',
@@ -72,7 +72,7 @@ export const courses = [
 		message: 'I\'m "Daylighted" to have worked on so many projects led by you. You kept us focused and steered us in making products that clients love. You will be successful no matter what you do. Here\'s to you and remembering the first product I helped ship under your guidance, and the Beermageddon Paddletron 3000 you ordered for the team celebration! Best wishes.'
 	},
 	{
-		id: 'course9',
+		id: 'bbq',
 		name: 'Put it on the BBQ Train',
 		author: {
 			id: 'sakulick',
@@ -81,7 +81,7 @@ export const courses = [
 		message: 'It was brief, but it was fun! Seeing all of these snapshots of your time with D2L, it\'s too bad we never got to share a BBQ or throw axes together - your new team is getting someone pretty awesome. :) Good luck at Shopify!'
 	},
 	{
-		id: 'course10',
+		id: 'patio',
 		name: 'Course 10',
 		author: {
 			id: 'svanherk',
