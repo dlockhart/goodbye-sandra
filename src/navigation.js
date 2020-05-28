@@ -2,7 +2,10 @@
 import '@brightspace-ui/core/components/button/button.js';
 import '@brightspace-ui/core/components/colors/colors.js';
 import '@brightspace-ui/core/components/dialog/dialog.js';
+import '@brightspace-ui/core/components/dropdown/dropdown.js';
+import '@brightspace-ui/core/components/dropdown/dropdown-content.js';
 import 'd2l-navigation/d2l-navigation.js';
+import 'd2l-navigation/d2l-navigation-button.js';
 import 'd2l-navigation/d2l-navigation-link-image.js';
 import 'd2l-navigation/d2l-navigation-main-header.js';
 import 'd2l-navigation/d2l-navigation-main-footer.js';
@@ -182,9 +185,17 @@ export class Navigation extends LitElement {
 						<d2l-navigation-separator class="hide-for-small-screens"></d2l-navigation-separator>
 						<h1 class="course-name hide-for-small-screens">Farewell Sandra!</h1>
 					</div>
-					<div slot="right">
-						<d2l-navigation-link-image src="assets/user-image-set.png" text="toilet" slim></d2l-navigation-link-image><span class="hide-for-small-screens">Sandra Earl</span>
-					</div>
+					<d2l-dropdown slot="right" style="height: 100%;">
+						<d2l-navigation-button class="d2l-dropdown-opener">
+							<span style="display:flex;align-items:center;">
+								<img src="assets/user-image-set.png" alt="" style="width:42px;height:42px;">
+								<span class="hide-for-small-screens" style="font-size: 0.7rem;flex: 0 1 auto;">Sandra Earl</span>
+							</span>
+						</d2l-navigation-button>
+						<d2l-dropdown-content>
+							<img src="assets/toiletprofile.gif" alt="" width="300" height="202">
+						</d2l-dropdown-content>
+					</d2l-dropdown>
 				</d2l-navigation-main-header>
 				<d2l-navigation-main-footer>
 					<div slot="main" class="d2l-navigation-main-wrapper" role="list">
