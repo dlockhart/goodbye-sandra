@@ -50,10 +50,11 @@ export class AnnouncementsWidget extends LitElement {
 				<img src="../assets/announcements/record.jpg" width="640" height="396">
 				<p>Unfortunately after posing for 1000 different versions of this photo over an hour, the staff were left with severe face muscle damage, resulting in permanently twitchy smiles.</p>
 				<hr>
-				<h3 class="d2l-heading-3">Mystery drummer ghosts coworkers</h3>
+				<h3 class="d2l-heading-3">Mystery drummer disappears suddenly</h3>
 				<p class="d2l-body-small">Dec 10, 2006</p>
 				<img src="../assets/announcements/drums.jpg" width="640" height="477">
 				<p>An employee at a local company's holiday office party performed a surprise drum solo for her coworkers, much to the annoyance of the band who owned the equipment. Shortly following the performance she vanished, leaving only a trail of golden flakes.</p>
+				<p>In other news, local LCBO stores are experiencing a shortage of Goldschläger.</p>
 			</goodbye-sandra-widget>
 		`;
 	}
