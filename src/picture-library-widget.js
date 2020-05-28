@@ -44,7 +44,7 @@ export class PictureLibraryWidget extends LitElement {
 				text-align: center;
 			}
 			figcaption {
-				color: var(--d2l-color-galena);
+				color: var(--d2l-color-tungsten);
 				text-align: center;
 			}
 		`];
@@ -67,7 +67,7 @@ export class PictureLibraryWidget extends LitElement {
 				<d2l-button-icon slot="title" icon="tier1:chevron-right" text="Next" @click="${this._next}" ?disabled="${nextIsDisabled}"></d2l-button-icon>
 				<d2l-button-icon slot="title" icon="tier1:zoom-in" text="View" @click="${this._selectPicture}"></d2l-button-icon>
 				<figure @click="${this._selectPicture}">
-					<img src="assets/library/${picture.id}.jpg" alt="${picture.caption}" width="${picture.width}" height="${picture.height}">
+					<img src="assets/library/${picture.id}.jpg" alt="${picture.caption}" width="${picture.width}" height="${picture.height}" loading="lazy">
 					<figcaption>${picture.caption}</figcaption>
 				</figure>
 			</goodbye-sandra-widget>
