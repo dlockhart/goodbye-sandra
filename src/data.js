@@ -1,12 +1,12 @@
 export const courses = [
 	{
 		id: 'course1',
-		name: 'Course 1',
+		name: 'Partying Hard at Winterfest',
 		author: {
 			id: 'akerr',
 			name: 'Allan Kerr'
 		},
-		message: 'Test test test.'
+		message: 'I didn\'t get as much of an opportunity to work with you as I would have liked but even before joining Gaudi I had heard multiple people speak extremely highly of you and everything you\'ve done for D2L. In my short time on the team its become apparent just how invaluable you are, Shopify is lucky to have you! I couldn\'t find a photo from the one time we went out as a team after I joined but hopefully this one brings back some good memories from partying hard at Winterfest!'
 	},
 	{
 		id: 'course2',
