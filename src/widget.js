@@ -22,14 +22,26 @@ export class Widget extends LitElement {
 				padding: 15px 20px 20px;
 			}
 			.d2l-heading-4 {
-				margin: 0 0 11px;
+				flex: 1 0 auto;
+				margin: 0;
+			}
+			.title {
+				align-items: center;
+				display: flex;
+				margin-bottom: 11px;
+			}
+			.right {
+				flex: 0 0 auto;
 			}
 		`];
 	}
 
 	render() {
 		return html`
-			<h2 class="d2l-heading-4">${this.name}</h2>
+			<div class="title">
+				<h2 class="d2l-heading-4">${this.name}</h2>
+				<div class="right"><slot name="title"></slot></div>
+			</div>
 			<slot></slot>
 		`;
 	}

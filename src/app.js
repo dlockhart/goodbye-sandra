@@ -1,6 +1,7 @@
 import './announcements-widget.js';
 import './calendar-widget.js';
 import './my-courses-widget.js';
+import './picture-library-widget.js';
 import './navigation.js';
 import { LitElement, html, css } from 'lit-element';
 
@@ -28,24 +29,24 @@ export class App extends LitElement {
 				grid-template-rows: auto auto;
 				grid-template-areas:
 					"courses courses"
-					"announcements calendar";
+					"col1 col2";
 			}
 			@media (max-width: 850px) {
 				.homepage {
 					grid-template-areas:
 					"courses courses"
-					"announcements announcements"
-					"calendar calendar";
+					"col1 col1"
+					"col2 col2";
 				}
 			}
 			goodbye-sandra-my-courses-widget {
 				grid-area: courses;
 			}
-			goodbye-sandra-announcements-widget {
-				grid-area: announcements;
+			.col1 {
+				grid-area: col1;
 			}
-			goodbye-sandra-calendar-widget {
-				grid-area: calendar;
+			.col2 {
+				grid-area: col2;
 			}
 		`;
 	}
@@ -59,8 +60,13 @@ export class App extends LitElement {
 				<div class="page-padding">
 					<div class="homepage">
 						<goodbye-sandra-my-courses-widget></goodbye-sandra-my-courses-widget>
-						<goodbye-sandra-announcements-widget></goodbye-sandra-announcements-widget>
-						<goodbye-sandra-calendar-widget></goodbye-sandra-calendar-widget>
+						<div class="col1">
+							<goodbye-sandra-announcements-widget></goodbye-sandra-announcements-widget>
+						</div>
+						<div class="col2">
+							<goodbye-sandra-calendar-widget></goodbye-sandra-calendar-widget>
+							<goodbye-sandra-picture-library-widget></goodbye-sandra-picture-library-widget>
+						</div>
 					</div>
 				</div>
 			</main>
