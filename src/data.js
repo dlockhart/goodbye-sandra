@@ -69,7 +69,7 @@ export const courses = [
 			id: 'mweiss',
 			name: 'Mark Weiss'
 		},
-		message: 'I was "Daylighted" to work on the Daylight project. Sandra\'s ability to keep us focused was key to pushing out an amazing product update that clients loved. Capped off with a most memorable drink order by Sandra, a Beermageddon Paddletron 3000 for the team!!!'
+		message: 'I\'m "Daylighted" to have worked on so many projects led by you. You kept us focused and steered us in making products that clients love. You will be successful no matter what you do. Here\'s to you and remembering the first product I helped ship under your guidance, and the Beermageddon Paddletron 3000 you ordered for the team celebration! Best wishes.'
 	},
 	{
 		id: 'course9',
