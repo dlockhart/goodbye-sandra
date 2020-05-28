@@ -39,6 +39,7 @@ export class PictureLibraryWidget extends LitElement {
 				margin-left: 5px;
 			}
 			figure {
+				cursor: zoom-in;
 				margin: 0;
 			}
 			figcaption {
@@ -64,7 +65,7 @@ export class PictureLibraryWidget extends LitElement {
 				<d2l-button-icon slot="title" icon="tier1:chevron-left" text="Previous" @click="${this._prev}" ?disabled="${prevIsDisabled}"></d2l-button-icon>
 				<d2l-button-icon slot="title" icon="tier1:chevron-right" text="Next" @click="${this._next}" ?disabled="${nextIsDisabled}"></d2l-button-icon>
 				<d2l-button-icon slot="title" icon="tier1:zoom-in" text="View" @click="${this._selectPicture}"></d2l-button-icon>
-				<figure>
+				<figure @click="${this._selectPicture}">
 					<img src="assets/library/${picture.id}.jpg" alt="${picture.caption}" width="${picture.width}" height="${picture.height}">
 					<figcaption>${picture.caption}</figcaption>
 				</figure>
