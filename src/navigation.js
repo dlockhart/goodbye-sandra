@@ -86,14 +86,6 @@ export class Navigation extends LitElement {
 				outline: none;
 				padding: 0 0.6rem;
 			}
-			@media (max-width: 767px) {
-				.d2l-consortium-tab {
-					padding: 0 0.5rem;
-				}
-				.hide-for-small-screens {
-					display: none;
-				}
-			}
 			.d2l-consortium-tab:hover {
 				background-color: rgba(0, 0, 0, .70);
 			}
@@ -135,8 +127,9 @@ export class Navigation extends LitElement {
 			.d2l-navigation-main-wrapper {
 				align-items: center;
 				display: flex;
-				height: calc(1rem + 40px);
-				flex-wrap: nowrap;
+				height: auto;
+				min-height: calc(1rem + 40px);
+				flex-wrap: wrap;
 				transition: opacity .2s ease-in;
 			}
 			.d2l-navigation-item {
@@ -153,6 +146,19 @@ export class Navigation extends LitElement {
 				color: #006fbf;
 				outline: none;
 				text-decoration: underline;
+			}
+
+			@media (max-width: 767px) {
+				.d2l-consortium-tab {
+					padding: 0 0.5rem;
+				}
+				.hide-for-small-screens {
+					display: none;
+				}
+				.d2l-navigation-item {
+					font-size: .8rem;
+					margin-right: 20px;
+				}
 			}
 		`];
 	}
