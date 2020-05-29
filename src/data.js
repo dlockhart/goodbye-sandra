@@ -115,6 +115,12 @@ export const navLinks = [
 		name: 'Polish',
 		width: 1040,
 		height: 770
+	},
+	{
+		id: 'broken-links',
+		name: 'Broken Links',
+		width: 1040,
+		height: 693
 	}
 ];
 
