@@ -38,7 +38,7 @@ export class AnnouncementsWidget extends LitElement {
 			<goodbye-sandra-widget name="Announcements">
 				<h3 class="d2l-heading-3">One of D2L's most beloved employees is leaving!</h3>
 				<p class="d2l-body-small">Posted May 29, 2020</p>
-				<!-- Video to go here -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/JqzezRn3dRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: 10px;"></iframe>
 				<p>You heard right folks.  Sandra Earl, long-time employee of D2L, has decided it's time to try something new.  She will be missed, and we wish her the best of luck!</p>
 				<hr>
 				<h3 class="d2l-heading-3">Announcing EOL for Internet Explorer Support and OpenDyslexic Font!</h3>
