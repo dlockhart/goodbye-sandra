@@ -87,7 +87,7 @@ export const courses = [
 			id: 'svanherk',
 			name: 'Stacey Van Herk'
 		},
-		message: 'You\'re going to be greatly missed Sandra. I\'ve learned so much from working with you over the last few years. Thank you for taking me out to lunch when I first started part-time with Gaudi... when I was feeling out of place you made me feel very welcome. You\'re a big part of why this team is so special. Even in this WFH environment, I recommend finding some way to make your milkshakes for your new co-workers - it\'s an instant win!'
+		message: 'You\'re going to be greatly missed Sandra. I\'ve learned so much from working with you over the last few years. Thank you for taking me out to lunch when I first started part-time with Gaudi... when I was feeling out of place you made me feel very welcome. You\'re a big part of why this team is so special. Even in this WFH environment, I recommend finding some way to make your milkshakes for your new co-workers - they\'re an instant win!'
 	}
 ];
 
