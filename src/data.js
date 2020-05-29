@@ -168,6 +168,12 @@ export const pictureLibraryPhotos = [
 		height: 537
 	},
 	{
+		id: 'experienceit',
+		caption: 'A D2L marketing department masterpiece for the ages.',
+		width: 500,
+		height: 500
+	},
+	{
 		id: 'cold',
 		caption: 'Gaudi BBQs go ahead: rain, shine or frigid.',
 		width: 800,
@@ -184,5 +190,17 @@ export const pictureLibraryPhotos = [
 		caption: 'What happens in Vegas, stays in Vegas.',
 		width: 800,
 		height: 479
+	},
+	{
+		id: 'office',
+		caption: 'Office pranks for Mark (2209).',
+		width: 800,
+		height: 703
+	},
+	{
+		id: 'tansy',
+		caption: 'Adventures getting water for Tansy at a11yconfTO.',
+		width: 800,
+		height: 733
 	}
 ]
