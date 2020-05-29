@@ -108,13 +108,19 @@ export const navLinks = [
 		id: 'personal-dashboard',
 		name: 'Personal Dashboard',
 		width: 700,
-		height: 338
+		height: 388
 	},
 	{
 		id: 'polish-project',
 		name: 'Polish',
 		width: 1040,
 		height: 770
+	},
+	{
+		id: 'broken-links',
+		name: 'Broken Links',
+		width: 1040,
+		height: 693
 	}
 ];
 
