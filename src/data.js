@@ -82,7 +82,7 @@ export const courses = [
 	},
 	{
 		id: 'patio',
-		name: 'How: To: Win With Milkshakes',
+		name: 'How To: Win With Milkshakes',
 		author: {
 			id: 'svanherk',
 			name: 'Stacey Van Herk'
